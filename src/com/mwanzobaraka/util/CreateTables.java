@@ -12,7 +12,6 @@ public class CreateTables {
     public static void create(){
 //        new Thread(()->{
 
-        System.out.println();
         try (Connection conn = ConnectionProvider.getConnection()){
 
             String createSchema = "CREATE SCHEMA IF NOT EXISTS `chamabaraka` DEFAULT CHARACTER SET utf8 ;";
