@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class LoginWindow extends GenericWindow implements MouseListener {
     ProjectJPanel panel;
@@ -26,8 +27,7 @@ public class LoginWindow extends GenericWindow implements MouseListener {
 
     public void createComponents(){
         // Labels
-        ProjectLabel logo = new ProjectLabel(new ImageIcon("C:\\Users\\John\\IdeaProjects\\ChamaProject\\src\\com\\mwanzobaraka\\res\\logo.png"), 0);
-        //ProjectLabel logo = new ProjectLabel(new ImageIcon("res/logo.png"), 0);
+        ProjectLabel logo = new ProjectLabel(new ImageIcon(Objects.requireNonNull(getClass().getResource("/res/logo.png"))), 0);
         logo.setBounds(195, 5, 100, 100);
         ProjectLabel header = new ProjectLabel("LOGIN");
         header.setFont(new Font("Roboto", Font.BOLD, 25));

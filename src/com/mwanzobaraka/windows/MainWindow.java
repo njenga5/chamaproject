@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class MainWindow extends GenericWindow implements ActionListener {
     ProjectJPanel centerPanel,topPanel, rightPanel, statusBar, containerCenter;
@@ -66,7 +67,7 @@ public class MainWindow extends GenericWindow implements ActionListener {
         ProjectJPanel containerRight = new ProjectJPanel(null, 0);
         containerRight.setPreferredSize(new Dimension(950, 0));
         ProjectJPanel containerLeft = new ProjectJPanel(null, 0);
-        ProjectLabel logo = new ProjectLabel(grpName, new ImageIcon("C:\\Users\\John\\IdeaProjects\\ChamaProject\\src\\com\\mwanzobaraka\\res/logo.png"), 0);
+        ProjectLabel logo = new ProjectLabel(grpName, new ImageIcon(Objects.requireNonNull(getClass().getResource("/res/logo.png"))), 0);
         logo.setFont(new Font("Roboto", Font.ITALIC, 30));
         logo.setBackground(null);
         logo.setBounds(0, 0, 400, 100);
