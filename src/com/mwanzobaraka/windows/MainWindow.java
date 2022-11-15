@@ -66,7 +66,7 @@ public class MainWindow extends GenericWindow implements ActionListener {
         ProjectJPanel containerRight = new ProjectJPanel(null, 0);
         containerRight.setPreferredSize(new Dimension(950, 0));
         ProjectJPanel containerLeft = new ProjectJPanel(null, 0);
-        ProjectLabel logo = new ProjectLabel(grpName, new ImageIcon("src\\com\\mwanzobaraka\\res\\logo.png"), 0);
+        ProjectLabel logo = new ProjectLabel(grpName, new ImageIcon("C:\\Users\\John\\IdeaProjects\\ChamaProject\\src\\com\\mwanzobaraka\\res/logo.png"), 0);
         logo.setFont(new Font("Roboto", Font.ITALIC, 30));
         logo.setBackground(null);
         logo.setBounds(0, 0, 400, 100);
@@ -275,7 +275,7 @@ public class MainWindow extends GenericWindow implements ActionListener {
                 }
             }catch(SQLException | IOException e){
                 JOptionPane.showMessageDialog(this, "Query Error", "Error", JOptionPane.ERROR_MESSAGE);
-                e.printStackTrace();
+//                e.printStackTrace();
             }
 
         });
@@ -287,7 +287,7 @@ public class MainWindow extends GenericWindow implements ActionListener {
                     });
                 }
             } catch (SQLException | IOException e) {
-                JOptionPane.showMessageDialog(this, "Query Error g", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Query Error", "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
         thread1.start();
